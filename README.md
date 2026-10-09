@@ -1,12 +1,16 @@
 # Lab Tracking — bài cá nhân Nguyễn Văn Thân
 
+> **BÁO CÁO ĐÃ HOÀN THÀNH: [Mở BAO_CAO.md](BAO_CAO.md)** — Nguyễn Văn Thân, MSV **2A202602859**.
+>
+> [5 tệp kết quả để chấm](runs/nop_bai/) · [Báo cáo ở đường dẫn đề yêu cầu](submission_template/BAO_CAO_mau.md)
+
 **Họ tên:** Nguyễn Văn Thân · **MSV:** 2A202602859 · **Ngày thực hiện:** 09/10/2026.
 
 Đã chạy đủ **4.137 frame của 5 video**, thực hiện **53 lượt thử cấu hình**, giữ nguyên detector YOLO26 nano, ảnh 640 px, lớp người và trọng số Re-ID theo đề.
 
 ## Bài nộp
 
-- **[Báo cáo cá nhân đầy đủ](submission/BAO_CAO_NguyenVanThan_2A202602859.md)**: lựa chọn, số liệu thật, cấu hình đã loại, nhận xét từng cảnh và ảnh có ID.
+- **[Báo cáo cá nhân đầy đủ — BAO_CAO.md ở thư mục gốc](BAO_CAO.md)**: lựa chọn, số liệu thật, cấu hình đã loại, nhận xét từng cảnh và ảnh có ID.
 - **[5 file kết quả chính thức](runs/nop_bai/)**: `video_1.txt` … `video_5.txt`, kèm metadata số frame và SHA-256, đúng đường dẫn đề yêu cầu. [submission/results/](submission/results/) chứa bản sao giống hệt để xem cùng báo cáo. Git chỉ theo dõi 5 file TXT và 5 metadata JSON trong `runs/nop_bai/`; video và các lượt chạy khác được bỏ qua.
 - [Notebook đã chạy](on_tap_metrics.ipynb): 3 câu True/False và detector một frame.
 - [Bảng 53 lượt thử](submission/EXPERIMENTS.csv), [file thử và metric gốc](submission/experiments/), [baseline đủ frame](submission/baseline/).

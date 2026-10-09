@@ -1,9 +1,11 @@
-# Báo cáo lab: lựa chọn tracker cho 5 video
+# Báo cáo bài lab — Nguyễn Văn Thân — 2A202602859
 
 **Họ tên:** Nguyễn Văn Thân
 **Mã sinh viên:** 2A202602859
 **Hình thức:** Cá nhân
 **Ngày thực hiện:** 09/10/2026
+
+Bản báo cáo theo đúng đường dẫn đề yêu cầu: [submission_template/BAO_CAO_mau.md](submission_template/BAO_CAO_mau.md).
 
 ## 1. Mục tiêu và điều kiện cố định
 
