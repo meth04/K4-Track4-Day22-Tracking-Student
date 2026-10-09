@@ -1,0 +1,17 @@
+{
+  "video": "video_2",
+  "tracker": "strongsort",
+  "conf": 0.3,
+  "iou": 0.5,
+  "frames_processed": 150,
+  "full_sequence": false,
+  "seconds": 19.896161199954804,
+  "rows": 1574,
+  "unique_ids": 24,
+  "mean_tracks": 10.493333333333334,
+  "tracker_config_sha256": "10357666c41d8e5f56d46eff1500c21d5496e82b2a23ac80bd1a20d9bc7c56d7",
+  "reid_sha256": "6f57607fed9f502b9efed546108132ee715df5a5b6e6932c6269bacb47f59f99",
+  "result_sha256": "a0e45f07255643b0fc442aa040ed2d5a46179485004e99436d493a44702d6dc9",
+  "device": "cuda:0",
+  "half": false
+}

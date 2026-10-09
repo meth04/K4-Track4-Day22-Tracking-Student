@@ -1,0 +1,7 @@
+[
+  {"video": "video_1", "tracker": "botsort", "conf": 0.3, "iou": 0.7},
+  {"video": "video_2", "tracker": "botsort", "conf": 0.15, "iou": 0.5},
+  {"video": "video_3", "tracker": "botsort", "conf": 0.3, "iou": 0.4},
+  {"video": "video_4", "tracker": "botsort", "conf": 0.3, "iou": 0.4},
+  {"video": "video_5", "tracker": "botsort", "conf": 0.15, "iou": 0.5}
+]

@@ -61,7 +61,8 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--lab-data-root", required=True, type=Path, help="Thư mục lab_data giảng viên phát")
     args = parser.parse_args()
-    check(args.lab_data_root)
+    if not check(args.lab_data_root):
+        raise SystemExit(1)
 
 
 if __name__ == "__main__":

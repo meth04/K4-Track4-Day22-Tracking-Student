@@ -1,0 +1,94 @@
+Error importing BURST due to missing underlying dependency: No module named 'pycocotools'
+
+Eval Config:
+USE_PARALLEL         : False
+NUM_PARALLEL_CORES   : 8
+BREAK_ON_ERROR       : True
+RETURN_ON_ERROR      : False
+LOG_ON_ERROR         : C:\Users\nguye\Documents\K20\TrackEval\error_log.txt
+PRINT_RESULTS        : True
+PRINT_ONLY_COMBINED  : False
+PRINT_CONFIG         : True
+TIME_PROGRESS        : True
+DISPLAY_LESS_PROGRESS : False
+OUTPUT_SUMMARY       : True
+OUTPUT_EMPTY_CLASSES : True
+OUTPUT_DETAILED      : True
+PLOT_CURVES          : False
+
+MotChallenge2DBox Config:
+PRINT_CONFIG         : True
+GT_FOLDER            : ..\TrackEval\data\gt\mot_challenge
+TRACKERS_FOLDER      : ..\TrackEval\data\trackers\mot_challenge
+OUTPUT_FOLDER        : None
+TRACKERS_TO_EVAL     : ['than_final']
+CLASSES_TO_EVAL      : ['pedestrian']
+BENCHMARK            : LAB21
+SPLIT_TO_EVAL        : train
+INPUT_AS_ZIP         : False
+DO_PREPROC           : True
+TRACKER_SUB_FOLDER   : data
+OUTPUT_SUB_FOLDER    :
+TRACKER_DISPLAY_NAMES : None
+SEQMAP_FOLDER        : None
+SEQMAP_FILE          : None
+SEQ_INFO             : {'video_1': None}
+GT_LOC_FORMAT        : {gt_folder}/{seq}/gt/gt.txt
+SKIP_SPLIT_FOL       : False
+
+CLEAR Config:
+METRICS              : ['HOTA', 'CLEAR', 'Identity']
+THRESHOLD            : 0.5
+PRINT_CONFIG         : True
+
+Identity Config:
+METRICS              : ['HOTA', 'CLEAR', 'Identity']
+THRESHOLD            : 0.5
+PRINT_CONFIG         : True
+
+Evaluating 1 tracker(s) on 1 sequence(s) for 1 class(es) on MotChallenge2DBox dataset using the following metrics: HOTA, CLEAR, Identity, Count
+
+
+Evaluating than_final
+
+    MotChallenge2DBox.get_raw_seq_data(than_final, video_1)                0.2844 sec
+    MotChallenge2DBox.get_preprocessed_seq_data(pedestrian)                0.2300 sec
+    HOTA.eval_sequence()                                                   0.2439 sec
+    CLEAR.eval_sequence()                                                  0.0384 sec
+    Identity.eval_sequence()                                               0.0089 sec
+    Count.eval_sequence()                                                  0.0000 sec
+1 eval_sequence(video_1, than_final)                                     0.8099 sec
+
+All sequences for than_final finished in 0.81 seconds
+
+HOTA: than_final-pedestrian        HOTA      DetA      AssA      DetRe     DetPr     AssRe     AssPr     LocA      OWTA      HOTA(0)   LocA(0)   HOTALocA(0)
+video_1                            29.969    18.408    49.061    19.176    74.385    52.38     80.959    83.019    30.624    37.181    76.409    28.409
+COMBINED                           29.969    18.408    49.061    19.176    74.385    52.38     80.959    83.019    30.624    37.181    76.409    28.409
+
+CLEAR: than_final-pedestrian       MOTA      MOTP      MODA      CLR_Re    CLR_Pr    MTR       PTR       MLR       sMOTA     CLR_TP    CLR_FN    CLR_FP    IDSW      MT        PT        ML        Frag
+video_1                            19.025    80.817    19.202    22.491    87.244    14.516    17.742    67.742    14.71     4179      14402     611       33        9         11        42        105
+COMBINED                           19.025    80.817    19.202    22.491    87.244    14.516    17.742    67.742    14.71     4179      14402     611       33        9         11        42        105
+
+Identity: than_final-pedestrian    IDF1      IDR       IDP       IDTP      IDFN      IDFP
+video_1                            29.703    18.68     72.463    3471      15110     1319
+COMBINED                           29.703    18.68     72.463    3471      15110     1319
+
+Count: than_final-pedestrian       Dets      GT_Dets   IDs       GT_IDs
+video_1                            4790      18581     55        62
+COMBINED                           4790      18581     55        62
+
+Timing analysis:
+MotChallenge2DBox.get_raw_seq_data                                     0.2844 sec
+MotChallenge2DBox.get_preprocessed_seq_data                            0.2300 sec
+HOTA.eval_sequence                                                     0.2439 sec
+CLEAR.eval_sequence                                                    0.0384 sec
+Identity.eval_sequence                                                 0.0089 sec
+Count.eval_sequence                                                    0.0000 sec
+eval_sequence                                                          0.8099 sec
+Evaluator.evaluate                                                     0.8144 sec
+Gói dữ liệu thiếu eval_config.json; dùng cấu hình LAB21 đi kèm project.
+Đang chấm video luyện:
+  C:\Users\nguye\miniconda3\envs\cv_robotics_lab21\python.exe -c import numpy as np,runpy,sys; np.float=float; np.int=int; script=sys.argv.pop(1); sys.argv[0]=script; runpy.run_path(script,run_name='__main__') ..\TrackEval\scripts\run_mot_challenge.py --GT_FOLDER ..\TrackEval\data\gt\mot_challenge --TRACKERS_FOLDER ..\TrackEval\data\trackers\mot_challenge --BENCHMARK LAB21 --SPLIT_TO_EVAL train --SEQ_INFO video_1 --TRACKERS_TO_EVAL than_final --METRICS HOTA CLEAR Identity --USE_PARALLEL False --PLOT_CURVES False
+
+
+Đọc bảng phía trên: HOTA cân bằng phát hiện và giữ danh tính; MOTA phạt số lần đổi ID; IDF1 nhạy với track dài bị gán sai ID. Dùng các số này cho video_1 trong báo cáo. Không có bảng số cho video khác.

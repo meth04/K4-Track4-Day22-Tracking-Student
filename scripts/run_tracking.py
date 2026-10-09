@@ -20,15 +20,18 @@ https://google.github.io/styleguide/pyguide.html
 from __future__ import annotations
 
 import argparse
+import json
 import time
 from pathlib import Path
 from typing import Iterator, Tuple
 
 import cv2
 import numpy as np
+import torch
 from ultralytics import YOLO
 
 from boxmot.tracker_zoo import create_tracker, get_tracker_config
+from lab_experiments import file_sha256
 
 # ---------------------------------------------------------------------------
 # Các biến CỐ ĐỊNH cho cả lớp — KHÔNG sửa khi làm bài chính. Nếu muốn thử
@@ -126,6 +129,8 @@ def run(args: argparse.Namespace) -> None:
             và ``max_frames``.
     """
     source = Path(args.source)
+    torch.set_num_threads(2)
+    cv2.setNumThreads(2)
     out_dir = Path(args.out)
     out_dir.mkdir(parents=True, exist_ok=True)
     mot_txt = out_dir / f"{args.seq_name}.txt"
@@ -134,11 +139,12 @@ def run(args: argparse.Namespace) -> None:
     if args.tracker in USES_APPEARANCE:
         print(f"              tracker này dùng Re-ID: {REID_WEIGHTS.name} (tự tải nếu chưa có)")
     detector = YOLO(DETECTOR_WEIGHTS)
+    detector.to(args.device)
     tracker = create_tracker(
         tracker_type=args.tracker,
         tracker_config=get_tracker_config(args.tracker),
         reid_weights=REID_WEIGHTS,
-        device=args.device,
+        device=torch.device(args.device),
         half=False,
         per_class=False,
     )
@@ -150,7 +156,7 @@ def run(args: argparse.Namespace) -> None:
 
     for frame_idx, frame in iter_frames(source):
         if frame is None:
-            continue
+            raise RuntimeError(f"Không đọc được frame {frame_idx + 1} trong {source}")
         n_frames += 1
 
         dets = detect(detector, frame, conf=args.conf, iou=args.iou)
@@ -183,6 +189,8 @@ def run(args: argparse.Namespace) -> None:
 
         if args.max_frames and n_frames >= args.max_frames:
             break
+        if n_frames % 150 == 0:
+            print(f"[{args.seq_name}] Đã xử lý {n_frames} frame", flush=True)
 
     if writer is not None:
         writer.release()
@@ -190,6 +198,18 @@ def run(args: argparse.Namespace) -> None:
     mot_txt.write_text("\n".join(rows) + ("\n" if rows else ""))
 
     dt = time.time() - t0
+    metadata = {
+        "video": args.seq_name, "tracker": args.tracker, "conf": args.conf,
+        "iou": args.iou, "frames_processed": n_frames,
+        "full_sequence": not args.max_frames, "seconds": dt, "rows": len(rows),
+        "result_sha256": file_sha256(mot_txt),
+        "detector_sha256": file_sha256(Path(DETECTOR_WEIGHTS)),
+        "tracker_config_sha256": file_sha256(get_tracker_config(args.tracker)),
+        "device": args.device, "half": False, "execution": "direct",
+    }
+    (out_dir / f"{args.seq_name}.json").write_text(
+        json.dumps(metadata, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
     fps = n_frames / dt if dt > 0 else 0.0
     print(
         f"\n[{args.seq_name}] tracker={args.tracker} conf={args.conf} iou={args.iou} "

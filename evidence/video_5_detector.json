@@ -1,0 +1,449 @@
+{
+  "video": "video_5",
+  "frames": 750,
+  "detector": "yolo26n.pt",
+  "detector_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+  "imgsz": 640,
+  "classes": [
+    0
+  ],
+  "half": false,
+  "device": "cuda:0",
+  "end2end": false,
+  "seconds": 80.56550450000213,
+  "equivalence_checks": [
+    {
+      "frame": 1,
+      "conf": 0.3,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 1,
+      "conf": 0.5,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 1,
+      "conf": 0.3,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 1,
+      "conf": 0.5,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 1,
+      "conf": 0.3,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 1,
+      "conf": 0.5,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 69,
+      "conf": 0.3,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 69,
+      "conf": 0.5,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 69,
+      "conf": 0.3,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 69,
+      "conf": 0.5,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 69,
+      "conf": 0.3,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 69,
+      "conf": 0.5,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 137,
+      "conf": 0.3,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 137,
+      "conf": 0.5,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 137,
+      "conf": 0.3,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 137,
+      "conf": 0.5,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 137,
+      "conf": 0.3,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 137,
+      "conf": 0.5,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 205,
+      "conf": 0.3,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 205,
+      "conf": 0.5,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 205,
+      "conf": 0.3,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 205,
+      "conf": 0.5,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 205,
+      "conf": 0.3,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 205,
+      "conf": 0.5,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 273,
+      "conf": 0.3,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 273,
+      "conf": 0.5,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 273,
+      "conf": 0.3,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 273,
+      "conf": 0.5,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 273,
+      "conf": 0.3,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 273,
+      "conf": 0.5,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 341,
+      "conf": 0.3,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 341,
+      "conf": 0.5,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 341,
+      "conf": 0.3,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 341,
+      "conf": 0.5,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 341,
+      "conf": 0.3,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 341,
+      "conf": 0.5,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 409,
+      "conf": 0.3,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 409,
+      "conf": 0.5,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 409,
+      "conf": 0.3,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 409,
+      "conf": 0.5,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 409,
+      "conf": 0.3,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 409,
+      "conf": 0.5,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 477,
+      "conf": 0.3,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 477,
+      "conf": 0.5,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 477,
+      "conf": 0.3,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 477,
+      "conf": 0.5,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 477,
+      "conf": 0.3,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 477,
+      "conf": 0.5,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 545,
+      "conf": 0.3,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 545,
+      "conf": 0.5,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 545,
+      "conf": 0.3,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 545,
+      "conf": 0.5,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 545,
+      "conf": 0.3,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 545,
+      "conf": 0.5,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 613,
+      "conf": 0.3,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 613,
+      "conf": 0.5,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 613,
+      "conf": 0.3,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 613,
+      "conf": 0.5,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 613,
+      "conf": 0.3,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 613,
+      "conf": 0.5,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 681,
+      "conf": 0.3,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 681,
+      "conf": 0.5,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 681,
+      "conf": 0.3,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 681,
+      "conf": 0.5,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 681,
+      "conf": 0.3,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 681,
+      "conf": 0.5,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 750,
+      "conf": 0.3,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 750,
+      "conf": 0.5,
+      "iou": 0.4,
+      "passed": true
+    },
+    {
+      "frame": 750,
+      "conf": 0.3,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 750,
+      "conf": 0.5,
+      "iou": 0.5,
+      "passed": true
+    },
+    {
+      "frame": 750,
+      "conf": 0.3,
+      "iou": 0.7,
+      "passed": true
+    },
+    {
+      "frame": 750,
+      "conf": 0.5,
+      "iou": 0.7,
+      "passed": true
+    }
+  ],
+  "cache_sha256": "6abdc6e0436abadb11389cdcadf5bd74f96b160468b613c05fa95489ee0281db"
+}

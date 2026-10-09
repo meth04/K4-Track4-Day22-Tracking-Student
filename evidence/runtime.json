@@ -1,0 +1,19 @@
+{
+  "python": "3.13.13 | packaged by Anaconda, Inc. | (main, Apr 14 2026, 06:12:50) [MSC v.1942 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "gpu": "NVIDIA GeForce GTX 1650",
+  "versions": {
+    "torch": "2.10.0+cu126",
+    "torchvision": "0.25.0+cu126",
+    "numpy": "2.2.6",
+    "ultralytics": "8.4.171",
+    "boxmot": "10.0.42",
+    "opencv-python": "5.0.0.93",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.9.1"
+  },
+  "reused_cuda_environment": true,
+  "local_dependency_directory": ".cache/deps",
+  "detector_sha256": "9b09cc8bf347f0fc8a5f7657480587f25db09b34bf33b0652110fb03a8ad4fef",
+  "reid_sha256": "6f57607fed9f502b9efed546108132ee715df5a5b6e6932c6269bacb47f59f99"
+}

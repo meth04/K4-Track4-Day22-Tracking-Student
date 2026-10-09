@@ -1,0 +1,3 @@
+# Gi? nguy?n byte k?t qu? MOT ?? checksum th?ng nh?t khi clone.
+runs/nop_bai/*.txt -text whitespace=cr-at-eol
+submission/**/*.txt -text whitespace=cr-at-eol

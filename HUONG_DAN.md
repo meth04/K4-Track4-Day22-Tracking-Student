@@ -53,11 +53,14 @@ Một lần trên máy:
 ```bash
 conda env create -f environment.yml
 conda activate cv_robotics_lab21
+pip install --no-deps boxmot==10.0.42
 git clone https://github.com/JonathonLuiten/TrackEval.git
 pip install -e TrackEval/
 ```
 
 Lần sau chỉ cần `conda activate cv_robotics_lab21`.
+
+`requirements.txt` đã ghim NumPy tương thích với Python mới. Cài BoxMOT bằng `--no-deps` sau các thư viện runtime để tránh metadata cũ ép NumPy 1.23.1. Giữ đúng BoxMOT 10.0.42 theo đề. Script đã chuyển chuỗi `--device` sang `torch.device` cho BoxMOT và đặt detector lên thiết bị đã chọn.
 
 Tải ảnh năm video: [data_lab21.zip](https://drive.google.com/file/d/1UeVPQd6j5pSzxoJDcKJrerT9SL3vJLDt/view?usp=sharing). Giải nén, rồi gán `LAB_DATA` tới thư mục chứa `video_1` … `video_5`:
 

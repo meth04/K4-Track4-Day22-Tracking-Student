@@ -1,0 +1,10 @@
+{
+  "frames": 150,
+  "direct_sha256": "d811fe44aa7978f783376b7ad6a226d8541dffe420b9a4013768d48929a9d12a",
+  "cache_sha256": "2413f009038f7451a29fcb32a3f69609782c36b5218da6210445507bf3aca69f",
+  "identical_bytes": false,
+  "identical_frame_and_id": true,
+  "max_bbox_difference_px": 0.010000000000047748,
+  "max_confidence_difference": 9.999999999998899e-05,
+  "passed": true
+}

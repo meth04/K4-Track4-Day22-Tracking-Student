@@ -1,7 +1,16 @@
 lab_data/
-runs/
+runs/*
+!runs/nop_bai/
+runs/nop_bai/*
+!runs/nop_bai/video_[1-5].txt
+!runs/nop_bai/video_[1-5].json
 TrackEval/
 *.pt
 __pycache__/
 .ipynb_checkpoints/
 .pytest_cache/
+data/
+.cache/
+.venv/
+evidence/scenes.jpg
+*.mp4

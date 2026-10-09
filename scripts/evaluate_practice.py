@@ -48,15 +48,13 @@ def _load_eval_config(lab_data_root: Path) -> dict:
         Dict có khóa ``benchmark`` và có thể có ``split``.
 
     Raises:
-        FileNotFoundError: Khi thiếu ``video_1/eval_config.json``.
+        FileNotFoundError: Khi thiếu cả JSON của video_1 và cấu hình dự phòng project.
     """
     config_path = lab_data_root / PRACTICE_VIDEO / "eval_config.json"
     if not config_path.exists():
-        raise FileNotFoundError(
-            f"Không thấy {config_path}. Dùng đúng gói lab_data giảng viên phát "
-            "(file này đi kèm nhãn của video luyện)."
-        )
-    return json.loads(config_path.read_text())
+        config_path = Path(__file__).resolve().parents[1] / "configs" / "evaluation.json"
+        print("Gói dữ liệu thiếu eval_config.json; dùng cấu hình LAB21 đi kèm project.")
+    return json.loads(config_path.read_text(encoding="utf-8"))
 
 
 def stage(trackeval_root: Path, lab_data_root: Path, submission: Path, run_name: str, benchmark: str) -> None:
@@ -105,6 +103,9 @@ def run_trackeval(trackeval_root: Path, run_name: str, benchmark: str, split: st
     """
     cmd = [
         sys.executable,
+        "-c",
+        "import numpy as np,runpy,sys; np.float=float; np.int=int; "
+        "script=sys.argv.pop(1); sys.argv[0]=script; runpy.run_path(script,run_name='__main__')",
         str(trackeval_root / "scripts" / "run_mot_challenge.py"),
         "--GT_FOLDER", str(trackeval_root / "data" / "gt" / "mot_challenge"),
         "--TRACKERS_FOLDER", str(trackeval_root / "data" / "trackers" / "mot_challenge"),
@@ -114,6 +115,7 @@ def run_trackeval(trackeval_root: Path, run_name: str, benchmark: str, split: st
         "--TRACKERS_TO_EVAL", run_name,
         "--METRICS", "HOTA", "CLEAR", "Identity",
         "--USE_PARALLEL", "False",
+        "--PLOT_CURVES", "False",
     ]
     print("Đang chấm video luyện:\n  " + " ".join(cmd) + "\n")
     subprocess.run(cmd, check=True)
